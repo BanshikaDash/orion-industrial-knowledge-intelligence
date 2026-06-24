@@ -8,5 +8,12 @@ title TEXT,
 category TEXT
 )
 """)
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS knowledge(
+id INTEGER PRIMARY KEY,
+filename TEXT,
+chunk TEXT
+)
+""")
 connection.commit()
 connection.close()
